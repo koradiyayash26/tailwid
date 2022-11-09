@@ -8,15 +8,41 @@
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
   <style>
+    /* .back-main-container {
+     */
+    .hover-3lin-ul-sec:hover {
+      background-color: rgba(16, 18, 27, 0.4);
+    }
+    .hover-3lin-ul:hover {
+      border-radius: 10px;
+      background-color: rgba(16, 18, 27, 0.4);
+    }
+    .three-last-box:hover {
+      transform: scale(1.02);
+      background-color: rgba(16, 18, 27, 0.4);
+    }
     body {
+      font-family: "Poppins", sans-serif;
+
+      overflow: hidden;
       background-image: url(https://wallpapershome.com/images/wallpapers/macos-big-sur-1280x720-dark-wwdc-2020-22655.jpg);
       background-repeat: no-repeat;
       background-size: cover;
+    }
+    .border-btns btn-text-color {
+      border-color: rgba(181, 166, 192, 1);
+    }
+    .btn-text-color {
+      color: rgba(172, 155, 184, 1);
     }
     .maincontaint-bg {
       background-image: url(https://www.transparenttextures.com/patterns/cubes.png),
@@ -44,34 +70,65 @@
       padding: 10px;
       min-width: 40px;
     }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #01020366;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #01020366;
+    }
   </style>
   <body class="font-Poppins, sans-serif">
     <div class="flex">
       <div
         class="flex w-[100vw] h-[57px] border-b-[#71777240] border-b bg-[#10121b66] justify-content-start justify-between items-center pl-5"
       >
-        <div class="flex ml-160">
-          <div class="w-[15px] h-[15px] bg-[#f96057] rounded-xl mx-1"></div>
-          <div class="w-[15px] h-[15px] bg-[#f8ce52] rounded-xl mx-1"></div>
-          <div class="w-[15px] h-[15px] bg-[#5fcf65] rounded-xl mx-1"></div>
+        <div class="flex pl-[6px]">
+          <div class="w-[15px] h-[15px] bg-[#f96057] rounded-xl mx-[5px]"></div>
+          <div class="w-[15px] h-[15px] bg-[#f8ce52] rounded-xl mx-[5px]"></div>
+          <div class="w-[15px] h-[15px] bg-[#5fcf65] rounded-xl mx-[5px]"></div>
         </div>
-        <div class="flex item-center pl-14">
-          <a class="px-6 text-white font-bold p-[14px] tiptop" href="">Apps</a>
+        <div class="flex item-center ml-[76px]">
           <a
-            class="px-6 text-[#717790c7] hover:text-white hover:border-b p-[14px] font-bold"
+            class="px-6 text-white font-500 p-[15px] text-[15px] font-medium border-b-[2px] tiptop"
             href=""
-            >Your Work</a
+            >Apps</a
           >
           <a
-            class="px-6 text-[#717790c7] hover:text-white hover:border-b p-[14px] font-bold"
+            class="px-6 relative text-[#717790c7] hover:text-white hover:border-b-[2px] p-[15px] text-[15px] font-medium"
+            href=""
+          >
+            Your Work
+            <span
+              class="flex absolute top-3 right-1 w-[6px] h-[6px] text-[15px] font-medium mr-3 rounded-[100px] bg-[#3a6df0]"
+            ></span
+          ></a>
+          <a
+            class="px-6 text-[#717790c7] text-[15px] font-medium hover:text-white hover:border-b-[2px] p-[15px]"
             href=""
             >Discover</a
           >
           <a
-            class="px-6 text-[#717790c7] hover:text-white hover:border-b p-[14px] font-bold"
+            class="px-6 text-[#717790c7] relative hover:text-white hover:border-b-[2px] p-[15px] text-[15px] font-medium"
             href=""
-            >Market</a
-          >
+            >Market
+            <span
+              class="flex absolute top-3 right-1 w-[6px] h-[6px] mr-3 rounded-[100px] bg-[#3a6df0]"
+            ></span
+          ></a>
         </div>
         <div class="flex items-center">
           <div class="input-icons flex">
@@ -84,7 +141,25 @@
           </div>
         </div>
         <div class="flex items-center pr-7">
-          <i class="fa fa-bell text-xl text-white mx-3"></i>
+          <div class="relative mx-3">
+            <span
+              class="absolute bg-[#3a6df0] w-4 h-4 rounded-[50%] text-[10px] flex items-center justify-center text-[#fff] right-[-6px] top-[-6px]"
+              >3</span
+            >
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-bell w-[22px] text-[#f9fafb]"
+            >
+              <path
+                d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"
+              ></path>
+            </svg>
+          </div>
           <svg
             class="mx-3 w-[22px] h-[15.47] text-white"
             viewBox="0 0 512 512"
@@ -105,14 +180,10 @@
     <!-- sidddd navvvvvvvvvvvvvvvvvvvvvvvvvvv -->
     <div class="flex">
       <div
-        class="p-[26px] w-[18%] overflow-scroll border-r-[#71777240] border-r h-[100%] bg-[#10121b66]"
+        class="p-[26px] w-[18%] border-r-[#71777240] overflow-y-auto border-r h-[600px] bg-[#10121b66]"
       >
         <div class="">
-          <h4
-            class="mb-[14px] text-[15px] text-[#717790C7] font-[500] font-sans-serif"
-          >
-            Apps
-          </h4>
+          <h4 class="mb-[8px] text-[15px] text-[#717790C7] font-[500]">Apps</h4>
           <div class="">
             <a
               class="flex p-[10px] items-center text-white font-normal text-[14px]"
@@ -140,9 +211,9 @@
               </svg>
               All Apps
             </a>
-            <a class="flex items-center pl-3 text-white font-normal" href="">
+            <a class="flex items-center p-[7px] text-white text-[14px]" href="">
               <svg
-                class="w-[16px] h-[16px] mr-[8px]"
+                class="w-[16px] h-[16px] mr-[11px]"
                 viewBox="0 0 488.932 488.932"
                 fill="currentColor"
               >
@@ -150,20 +221,24 @@
                   d="M243.158 61.361v-57.6c0-3.2 4-4.9 6.7-2.9l118.4 87c2 1.5 2 4.4 0 5.9l-118.4 87c-2.7 2-6.7.2-6.7-2.9v-57.5c-87.8 1.4-158.1 76-152.1 165.4 5.1 76.8 67.7 139.1 144.5 144 81.4 5.2 150.6-53 163-129.9 2.3-14.3 14.7-24.7 29.2-24.7 17.9 0 31.8 15.9 29 33.5-17.4 109.7-118.5 192-235.7 178.9-98-11-176.7-89.4-187.8-187.4-14.7-128.2 84.9-237.4 209.9-238.8z"
                 ></path></svg
               >Updates
+              <span
+                class="bg-[#3a6df0] relative ml-[50px] rounded-full w-[20px] text-center h-[20px]"
+                >3</span
+              >
             </a>
           </div>
         </div>
 
-        <!-- seconddd -->
+        <!-- secondddddddddddddddddddddddddddddddddddddddddd -->
         <div class="mt-[20px]">
           <h4
-            class="mb-[14px] text-[15px] text-[#717790C7] font-[500] font-sans-serif"
+            class="mb-[12px] text-[15px] text-[#717790C7] font-mediam font-sans-serif"
           >
             Categories
           </h4>
           <div class="">
             <a
-              class="flex p-[10px] items-center text-white font-normal text-[14px]"
+              class="flex p-[6px] items-center text-white font-[14px] font-normal text-[14px]"
               href=""
             >
               <svg
@@ -181,7 +256,10 @@
 
               Photography
             </a>
-            <a class="flex items-center pl-3 text-white font-normal" href="">
+            <a
+              class="flex items-center p-[6px] text-white text-[14px] font-normal"
+              href=""
+            >
               <svg
                 class="w-[16px] h-[16px] mr-[8px]"
                 viewBox="0 0 512 512"
@@ -200,7 +278,7 @@
               Graphic Design
             </a>
             <a
-              class="flex p-[10px] items-center text-white font-normal text-[14px]"
+              class="flex p-[6px] items-center text-white font-normal text-[14px]"
               href=""
             >
               <svg
@@ -215,7 +293,10 @@
 
               Video
             </a>
-            <a class="flex items-center pl-3 text-white font-normal" href="">
+            <a
+              class="flex items-center p-[6px] text-white text-[14px] font-normal"
+              href=""
+            >
               <svg
                 class="w-[16px] h-[16px] mr-[8px]"
                 viewBox="0 0 512 512"
@@ -229,7 +310,7 @@
               Illustrations
             </a>
             <a
-              class="flex p-[10px] items-center text-white font-normal text-[14px]"
+              class="flex p-[6px] items-center text-white font-normal text-[14px]"
               href=""
             >
               <svg
@@ -247,7 +328,10 @@
 
               UI/UX
             </a>
-            <a class="flex items-center pl-3 text-white font-normal" href="">
+            <a
+              class="flex items-center p-[6px] text-white text-[14px] font-normal"
+              href=""
+            >
               <svg
                 class="w-[16px] h-[16px] mr-[8px]"
                 viewBox="0 0 512 512"
@@ -264,13 +348,14 @@
         </div>
         <!-- thireddddddddddddddddddddddddd -->
         <div class="mt-[20px]">
-          <h4
-            class="mb-[14px] text-[15px] text-[#717790C7] font-[500] font-sans-serif"
-          >
+          <h4 class="mb-[12px] text-[15px] text-[#717790C7] font-[500]">
             Fonts
           </h4>
           <div class="">
-            <a class="flex items-center pl-3 text-white font-normal" href="">
+            <a
+              class="flex items-center p-[6px] text-white text-[14px] font-normal"
+              href=""
+            >
               <svg
                 class="w-[16px] h-[16px] mr-[8px]"
                 viewBox="0 0 332 332"
@@ -286,14 +371,12 @@
         </div>
         <!-- fourrrrrrrrrrrrrrrrrrr -->
         <div class="mt-[20px]">
-          <h4
-            class="mb-[14px] text-[15px] text-[#717790C7] font-[500] font-sans-serif"
-          >
+          <h4 class="mb-[14px] text-[15px] text-[#717790C7] font-[500]">
             Resource Links
           </h4>
           <div class="">
             <a
-              class="flex p-[10px] items-center text-white font-normal text-[14px]"
+              class="flex p-[6px] items-center text-white text-[14px] font-normal text-[14px]"
               href=""
             >
               <svg
@@ -308,7 +391,10 @@
 
               Stock
             </a>
-            <a class="flex items-center pl-3 text-white font-normal" href="">
+            <a
+              class="flex items-center p-[6px] text-white text-[14px] font-normal"
+              href=""
+            >
               <svg
                 class="w-[16px] h-[16px] mr-[8px]"
                 viewBox="0 0 511.441 511.441"
@@ -325,7 +411,7 @@
               Tutorials
             </a>
             <a
-              class="flex p-[10px] items-center text-white font-normal text-[14px]"
+              class="flex p-[6px] items-center text-white text-[14px] font-normal"
               href=""
             >
               <svg
@@ -343,7 +429,10 @@
 
               Portfolio
             </a>
-            <a class="flex items-center pl-3 text-white font-normal" href="">
+            <a
+              class="flex items-center p-[6px] text-white text-[14px] font-normal"
+              href=""
+            >
               <svg
                 class="w-[16px] h-[16px] mr-[8px]"
                 viewBox="0 0 512 512"
@@ -360,7 +449,7 @@
               Behance
             </a>
             <a
-              class="flex p-[10px] items-center text-white font-normal text-[14px]"
+              class="flex p-[6px] items-center text-white font-normal text-[14px]"
               href=""
             >
               <svg
@@ -381,20 +470,27 @@
           </div>
         </div>
       </div>
-      <div class="w-[82%]">
+      <!-- left siddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd -->
+      <div
+        class="w-[82%] h-[600px] bg-[#10121b66] back-main-container overflow-y-auto sticky top-[56]"
+      >
         <div class="flex border-b-[#71777240] border-b h-[57px] items-center">
-          <a class="px-[30px] text-white font-bold" href="">All Apps</a>
+          <a class="px-[30px] text-white text-[15px] font-medium" href=""
+            >All Apps</a
+          >
           <div class="flex ml-[150px]">
-            <a class="px-[24px] text-white font-bold border-b p-[14px]" href=""
+            <a
+              class="px-6 text-white text-[15px] font-medium border-b-2 p-[16px]"
+              href=""
               >Desktop</a
             >
             <a
-              class="px-[24px] text-[#717790c7] hover:text-white font-bold hover:border-b p-[14px]"
+              class="px-6 text-[#717790c7] hover:text-white text-[15px] font-medium hover:border-b-2 p-[16px]"
               href=""
               >Mobile</a
             >
             <a
-              class="px-[24px] text-[#717790c7] hover:text-white font-bold hover:border-b p-[14px]"
+              class="px-6 text-[#717790c7] hover:text-white text-[15px] font-medium hover:border-b-2 p-[16px]"
               href=""
               >Web</a
             >
@@ -405,7 +501,7 @@
             class="flex justify-between rounded-xl w-[1050px] h-[200px] maincontaint-bg"
           >
             <div>
-              <h3 class="flex pt-5 pl-10 text-white font-bold">
+              <h3 class="flex pt-5 pl-10 text-[17px] font-medium text-white">
                 <svg class="w-[28px] mr-4" viewBox="0 0 512 512">
                   <path
                     d="M467 0H45C20.099 0 0 20.099 0 45v422c0 24.901 20.099 45 45 45h422c24.901 0 45-20.099 45-45V45c0-24.901-20.099-45-45-45z"
@@ -445,14 +541,14 @@
                 </svg>
                 Adobe Stock
               </h3>
-              <div class="flex ml-10 mt-5 text-white">
+              <div class="flex ml-10 mt-5 text-[14px] font-normal text-white">
                 Grab yourself 10 free images from Adobe Stock in <br />
                 a 30-day free trial plan and find perfect image, <br />
                 that will help you with your new project.
               </div>
               <div class="flex pl-10 mt-3">
                 <button
-                  class="rounded-full bg-[#3a6df0] w-[132px] h-[34px] text-white"
+                  class="rounded-full font-normal text-[15px] bg-[#3a6df0] w-[132px] h-[34px] text-white"
                 >
                   Start free trial
                 </button>
@@ -464,68 +560,304 @@
           </div>
         </div>
         <div class="flex justify-center mt-5">
-          <div class="flex rounded-xl w-[1050px] h-[187px] bg-[#10121b66]">
+          <div class="flex flex rounded-xl w-[1050px]">
+            <h3 class="flex text-[#717790c7] font-xs font-m0to font-medium">
+              Installed
+            </h3>
+          </div>
+        </div>
+        <div class="flex justify-center mt-5">
+          <div class="flex rounded-xl w-[1050px] border-[#27314b] border-[1px] h-[180px] bg-[#9297b321]">
             <div class="flex">
-              <ul class="flex">
+              <ul class="">
                 <li
-                  class="flex h-[60px] w-[1049px] border-[#71777s40] border-b"
+                  class="flex h-[60px] w-[1049px] border-[#10121b66] border-b"
                 >
-                  <div class="flex ml-5 items-center">
-                    <svg
-                      class="w-[30px] mr-3 rounded"
-                      viewBox="0 0 52 52"
-                      style="border: 1px solid #3291b8"
+                  <div
+                    class="flex h-[60px] w-[1049px] border-b-[#71777240] hover-3lin-ul items-center"
+                  >
+                    <div class="flex px-[18px] py-[10px]">
+                      <h3 class="flex font-[16px] font-medium text-white">
+                        <svg
+                          class="w-[30px] mr-[16px] rounded"
+                          viewBox="0 0 52 52"
+                          style="border: 1px solid #3291b8"
+                        >
+                          <g xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M40.824 52H11.176C5.003 52 0 46.997 0 40.824V11.176C0 5.003 5.003 0 11.176 0h29.649C46.997 0 52 5.003 52 11.176v29.649C52 46.997 46.997 52 40.824 52z"
+                              fill="#061e26"
+                              data-original="#393687"
+                            ></path>
+                            <path
+                              d="M12.16 39H9.28V11h9.64c2.613 0 4.553.813 5.82 2.44 1.266 1.626 1.9 3.76 1.9 6.399 0 .934-.027 1.74-.08 2.42-.054.681-.22 1.534-.5 2.561-.28 1.026-.66 1.866-1.14 2.52-.48.654-1.213 1.227-2.2 1.72-.987.494-2.16.74-3.52.74h-7.04V39zm0-12h6.68c.96 0 1.773-.187 2.44-.56.666-.374 1.153-.773 1.46-1.2.306-.427.546-1.04.72-1.84.173-.801.267-1.4.28-1.801.013-.399.02-.973.02-1.72 0-4.053-1.694-6.08-5.08-6.08h-6.52V27zM29.48 33.92l2.8-.12c.106.987.6 1.754 1.48 2.3.88.547 1.893.82 3.04.82s2.14-.26 2.98-.78c.84-.52 1.26-1.266 1.26-2.239s-.36-1.747-1.08-2.32c-.72-.573-1.6-1.026-2.64-1.36-1.04-.333-2.086-.686-3.14-1.06a7.36 7.36 0 01-2.78-1.76c-.987-.934-1.48-2.073-1.48-3.42s.54-2.601 1.62-3.761 2.833-1.739 5.26-1.739c.854 0 1.653.1 2.4.3.746.2 1.28.394 1.6.58l.48.279-.92 2.521c-.854-.666-1.974-1-3.36-1-1.387 0-2.42.26-3.1.78-.68.52-1.02 1.18-1.02 1.979 0 .88.426 1.574 1.28 2.08.853.507 1.813.934 2.88 1.28 1.066.347 2.126.733 3.18 1.16 1.053.427 1.946 1.094 2.68 2s1.1 2.106 1.1 3.6c0 1.494-.6 2.794-1.8 3.9-1.2 1.106-2.954 1.66-5.26 1.66-2.307 0-4.114-.547-5.42-1.64-1.307-1.093-1.987-2.44-2.04-4.04z"
+                              fill="#c1dbe6"
+                              data-original="#89d3ff"
+                            ></path>
+                          </g></svg
+                        >Photoshop
+                      </h3>
+                    </div>
+                    <div
+                      class="flex items-center font-[15px] font-medium text-white ml-[258px]"
                     >
-                      <g xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M40.824 52H11.176C5.003 52 0 46.997 0 40.824V11.176C0 5.003 5.003 0 11.176 0h29.649C46.997 0 52 5.003 52 11.176v29.649C52 46.997 46.997 52 40.824 52z"
-                          fill="#061e26"
-                          data-original="#393687"
-                        ></path>
-                        <path
-                          d="M12.16 39H9.28V11h9.64c2.613 0 4.553.813 5.82 2.44 1.266 1.626 1.9 3.76 1.9 6.399 0 .934-.027 1.74-.08 2.42-.054.681-.22 1.534-.5 2.561-.28 1.026-.66 1.866-1.14 2.52-.48.654-1.213 1.227-2.2 1.72-.987.494-2.16.74-3.52.74h-7.04V39zm0-12h6.68c.96 0 1.773-.187 2.44-.56.666-.374 1.153-.773 1.46-1.2.306-.427.546-1.04.72-1.84.173-.801.267-1.4.28-1.801.013-.399.02-.973.02-1.72 0-4.053-1.694-6.08-5.08-6.08h-6.52V27zM29.48 33.92l2.8-.12c.106.987.6 1.754 1.48 2.3.88.547 1.893.82 3.04.82s2.14-.26 2.98-.78c.84-.52 1.26-1.266 1.26-2.239s-.36-1.747-1.08-2.32c-.72-.573-1.6-1.026-2.64-1.36-1.04-.333-2.086-.686-3.14-1.06a7.36 7.36 0 01-2.78-1.76c-.987-.934-1.48-2.073-1.48-3.42s.54-2.601 1.62-3.761 2.833-1.739 5.26-1.739c.854 0 1.653.1 2.4.3.746.2 1.28.394 1.6.58l.48.279-.92 2.521c-.854-.666-1.974-1-3.36-1-1.387 0-2.42.26-3.1.78-.68.52-1.02 1.18-1.02 1.979 0 .88.426 1.574 1.28 2.08.853.507 1.813.934 2.88 1.28 1.066.347 2.126.733 3.18 1.16 1.053.427 1.946 1.094 2.68 2s1.1 2.106 1.1 3.6c0 1.494-.6 2.794-1.8 3.9-1.2 1.106-2.954 1.66-5.26 1.66-2.307 0-4.114-.547-5.42-1.64-1.307-1.093-1.987-2.44-2.04-4.04z"
-                          fill="#c1dbe6"
-                          data-original="#89d3ff"
-                        ></path>
-                      </g>
-                    </svg>
-
-                    Photoshop
-                    <span class="flex ml-[350px] text-center">
                       <span
-                        class="w-[6px] h-[6px] bg-[#5fcf65] mt-2 mr-[10px] rounded-xl"
+                        class="flex w-[6px] h-[6px] mr-3 rounded-[100px] bg-[#3bf083]"
                       ></span>
-
                       Updated
-                    </span>
-                    <div class="ml-[350px]">
+                    </div>
+                    <div class="flex item-center ml-[404px]">
                       <button
-                        class="rounded-full border-white w-[80px] h-[30px] border-[1px]"
+                        class="rounded-full w-[86px] h-[31px] border-[1px] border-btns btn-text-color"
                       >
                         Open
                       </button>
+                      <div class="flex">
+                        <i
+                          class="px-3 fa fa-ellipsis-h btn-text-color mt-1 text-[22px] rounded-[100px] small-three-dott"
+                        ></i>
+                      </div>
                     </div>
-                    <span class="flex mr-4 ml-3">
+                  </div>
+                </li>
+                <li class="">
+                  <div
+                    class="flex h-[60px] w-[1049px] hover-3lin-ul-sec border-[#10121b66] border-b-[1px] justify-between items-center"
+                  >
+                    <div class="flex px-[18px] py-[10px]">
+                      <h3 class="flex font-medium font-[16px] text-white">
+                        <svg
+                          class="w-[30px] mr-[16px] rounded"
+                          viewBox="0 0 52 52"
+                          style="border: 1px solid #b65a0b"
+                        >
+                          <g xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M40.824 52H11.176C5.003 52 0 46.997 0 40.824V11.176C0 5.003 5.003 0 11.176 0h29.649C46.997 0 52 5.003 52 11.176v29.649C52 46.997 46.997 52 40.824 52z"
+                              fill="#261400"
+                              data-original="#6d4c13"
+                            ></path>
+                            <path
+                              d="M30.68 39h-3.24l-2.76-9.04h-8.32L13.72 39H10.6l8.24-28h3.32l8.52 28zm-6.72-12l-3.48-11.36L17.12 27h6.84zM37.479 12.24c0 .453-.16.84-.48 1.16-.32.319-.7.479-1.14.479-.44 0-.827-.166-1.16-.5-.334-.333-.5-.713-.5-1.14s.166-.807.5-1.141c.333-.333.72-.5 1.16-.5.44 0 .82.16 1.14.48.321.322.48.709.48 1.162zM37.24 39h-2.88V18.96h2.88V39z"
+                              fill="#e6d2c0"
+                              data-original="#ffbd2e"
+                            ></path>
+                          </g></svg
+                        >Illustrator
+                      </h3>
+                    </div>
+                    <div
+                      class="flex font-[15px] font-medium items-center mr-1 text-white"
+                    >
                       <span
-                        class="w-[6px] h-[6px] bg-white rounded-xl ml-1"
+                        class="flex w-[6px] h-[6px] mr-3 rounded-[100px] bg-[#396df0]"
                       ></span>
+                      Update Available
+                    </div>
+                    <div class="flex item-center">
+                      <button
+                        class="rounded-full font-[16px] font-medium text-white bg-[#3a6df0] w-[153px] h-[30px]"
+                      >
+                        Update this app
+                      </button>
+                      <div class="flex">
+                        <i
+                          class="px-3 fa fa-ellipsis-h btn-text-color mt-1 text-[22px] rounded-[100px] small-three-dott"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    class="flex h-[60px] hover-3lin-ul w-[1049px] items-center"
+                  >
+                    <div class="flex px-[18px] mr-[5px] py-[10px]">
+                      <h3 class="flex font-[16px] font-medium text-white">
+                        <svg
+                          class="w-[30px] mr-[16px] rounded"
+                          viewBox="0 0 52 52"
+                          style="border: 1px solid #c75deb"
+                        >
+                          <g xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M40.824 52H11.176C5.003 52 0 46.997 0 40.824V11.176C0 5.003 5.003 0 11.176 0h29.649C46.997 0 52 5.003 52 11.176v29.649C52 46.997 46.997 52 40.824 52z"
+                              fill="#3a3375"
+                              data-original="#3a3375"
+                            ></path>
+                            <path
+                              d="M27.44 39H24.2l-2.76-9.04h-8.32L10.48 39H7.36l8.24-28h3.32l8.52 28zm-6.72-12l-3.48-11.36L13.88 27h6.84zM31.48 33.48c0 2.267 1.333 3.399 4 3.399 1.653 0 3.466-.546 5.44-1.64L42 37.6c-2.054 1.254-4.2 1.881-6.44 1.881-4.64 0-6.96-1.946-6.96-5.841v-8.2c0-2.16.673-3.841 2.02-5.04 1.346-1.2 3.126-1.801 5.34-1.801s3.94.594 5.18 1.78c1.24 1.187 1.86 2.834 1.86 4.94V30.8l-11.52.6v2.08zm8.6-5.24v-3.08c0-1.413-.44-2.42-1.32-3.021-.88-.6-1.907-.899-3.08-.899-1.174 0-2.167.359-2.98 1.08-.814.72-1.22 1.773-1.22 3.16v3.199l8.6-.439z"
+                              fill="#e4d1eb"
+                              data-original="#e7adfb"
+                            ></path>
+                          </g></svg
+                        >After Effects
+                      </h3>
+                    </div>
+                    <div
+                      class="flex items-center font-[16px] font-medium text-white ml-[245px]"
+                    >
                       <span
-                        class="w-[6px] h-[6px] bg-white rounded-xl ml-1"
+                        class="flex w-[6px] h-[6px] mr-3 rounded-[100px] bg-[#3bf083]"
                       ></span>
-                      <span
-                        class="w-[6px] h-[6px] bg-white rounded-xl ml-1"
-                      ></span>
-                    </span>
+                      Updated
+                    </div>
+                    <div class="flex item-center ml-[405px]">
+                      <button
+                        class="rounded-full w-[86px] h-[31px] border-[1px] border-btns btn-text-color"
+                      >
+                        Open
+                      </button>
+                      <div class="flex">
+                        <i
+                          class="px-3 fa fa-ellipsis-h mt-1 text-[22px] rounded-[100px] btn-text-color"
+                        ></i>
+                      </div>
+                    </div>
                   </div>
                 </li>
               </ul>
             </div>
-
-            <!-- hii -->
           </div>
-          
         </div>
-        
+        <div class="flex justify-center mt-7 mb-[14px]">
+          <div class="flex flex rounded-xl w-[1050px]">
+            <h3 class="flex text-[#717790c7] font-xs font-m0to font-medium">
+              Apps in your plan
+            </h3>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="flex justify-between w-[1050px] h-[230px]">
+            <div
+              class="w-[330px] three-last-box border-[#27314b] border-[1px] h-[205px] bg-[#9297b321] p-[20px] rounded-[15px]"
+            >
+              <h3 class="flex font-[16px] font-medium text-white items-center">
+                <svg
+                  class="w-[30px] mr-[16px] rounded"
+                  viewBox="0 0 512 512"
+                  style="border: 1px solid #a059a9"
+                >
+                  <path
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="M480 0H32C14.368 0 0 14.368 0 32v448c0 17.664 14.368 32 32 32h448c17.664 0 32-14.336 32-32V32c0-17.632-14.336-32-32-32z"
+                    fill="#210027"
+                    data-original="#7b1fa2"
+                  ></path>
+                  <g xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M192 64h-80c-8.832 0-16 7.168-16 16v352c0 8.832 7.168 16 16 16s16-7.168 16-16V256h64c52.928 0 96-43.072 96-96s-43.072-96-96-96zm0 160h-64V96h64c35.296 0 64 28.704 64 64s-28.704 64-64 64zM400 256h-32c-18.08 0-34.592 6.24-48 16.384V272c0-8.864-7.168-16-16-16s-16 7.136-16 16v160c0 8.832 7.168 16 16 16s16-7.168 16-16v-96c0-26.464 21.536-48 48-48h32c8.832 0 16-7.168 16-16s-7.168-16-16-16z"
+                      fill="#f6e7fa"
+                      data-original="#e1bee7"
+                    ></path>
+                  </g></svg
+                >Premiere Pro
+              </h3>
+              <div class="mt-[20px] font-[14px] font-normal text-white">
+                Edit, master and create fully proffesional videos
+              </div>
+              <div>
+                <hr class="w-[290px] border-[#717790c7] mt-[20px]" />
+              </div>
+              <div class="flex justify-end mt-[16px]">
+                <button
+                  class="w-[96px] h-[30px] text-white bg-[#3a6df0] rounded-[20px]"
+                >
+                  Update
+                </button>
+                <div class="flex mt-1">
+                  <i
+                    class="px-3 btn-text-color fa fa-ellipsis-h text-[22px] rounded-[100px] small-three-dott"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-[330px] border-[#27314b] border-[1px] three-last-box h-[205px] bg-[#9297b321] p-[20px] rounded-[15px]"
+            >
+              <h3 class="flex font-[16px] font-medium text-white items-center">
+                <svg
+                  class="w-[30px] mr-[16px] rounded"
+                  viewBox="0 0 52 52"
+                  style="border: 1px solid #c1316d"
+                >
+                  <g xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M40.824 52H11.176C5.003 52 0 46.997 0 40.824V11.176C0 5.003 5.003 0 11.176 0h29.649C46.997 0 52 5.003 52 11.176v29.649C52 46.997 46.997 52 40.824 52z"
+                      fill="#2f0015"
+                      data-original="#6f2b41"
+                    ></path>
+                    <path
+                      d="M18.08 39H15.2V13.72l-2.64-.08V11h5.52v28zM27.68 19.4c1.173-.507 2.593-.761 4.26-.761s3.073.374 4.22 1.12V11h2.88v28c-2.293.32-4.414.48-6.36.48-1.947 0-3.707-.4-5.28-1.2-2.08-1.066-3.12-2.92-3.12-5.561v-7.56c0-2.799 1.133-4.719 3.4-5.759zm8.48 3.12c-1.387-.746-2.907-1.119-4.56-1.119-1.574 0-2.714.406-3.42 1.22-.707.813-1.06 1.847-1.06 3.1v7.12c0 1.227.44 2.188 1.32 2.88.96.719 2.146 1.079 3.56 1.079 1.413 0 2.8-.106 4.16-.319V22.52z"
+                      fill="#e1c1cf"
+                      data-original="#ff70bd"
+                    ></path>
+                  </g></svg
+                >InDesign
+              </h3>
+              <div class="mt-[20px] font-[14px] font-normal text-white">
+                Design and publish great projects & mockups
+              </div>
+              <div>
+                <hr class="w-[290px] border-[#717790c7] mt-[20px]" />
+              </div>
+              <div class="flex justify-end mt-[16px]">
+                <button
+                  class="w-[96px] h-[30px] text-white bg-[#3a6df0] rounded-[20px]"
+                >
+                  Update
+                </button>
+                <div class="flex mt-1">
+                  <i
+                    class="px-3 btn-text-color fa fa-ellipsis-h text-[22px] rounded-[100px] small-three-dott"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-[330px] h-[205px] border-[#27314b] border-[1px] three-last-box bg-[#9297b321] p-[20px] rounded-[15px]"
+            >
+              <h3 class="flex font-[16px] font-medium text-white items-center">
+                <svg
+                  class="w-[30px] mr-[16px] rounded"
+                  viewBox="0 0 52 52"
+                  style="border: 1px solid #c75deb"
+                >
+                  <g xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M40.824 52H11.176C5.003 52 0 46.997 0 40.824V11.176C0 5.003 5.003 0 11.176 0h29.649C46.997 0 52 5.003 52 11.176v29.649C52 46.997 46.997 52 40.824 52z"
+                      fill="#3a3375"
+                      data-original="#3a3375"
+                    ></path>
+                    <path
+                      d="M27.44 39H24.2l-2.76-9.04h-8.32L10.48 39H7.36l8.24-28h3.32l8.52 28zm-6.72-12l-3.48-11.36L13.88 27h6.84zM31.48 33.48c0 2.267 1.333 3.399 4 3.399 1.653 0 3.466-.546 5.44-1.64L42 37.6c-2.054 1.254-4.2 1.881-6.44 1.881-4.64 0-6.96-1.946-6.96-5.841v-8.2c0-2.16.673-3.841 2.02-5.04 1.346-1.2 3.126-1.801 5.34-1.801s3.94.594 5.18 1.78c1.24 1.187 1.86 2.834 1.86 4.94V30.8l-11.52.6v2.08zm8.6-5.24v-3.08c0-1.413-.44-2.42-1.32-3.021-.88-.6-1.907-.899-3.08-.899-1.174 0-2.167.359-2.98 1.08-.814.72-1.22 1.773-1.22 3.16v3.199l8.6-.439z"
+                      fill="#e4d1eb"
+                      data-original="#e7adfb"
+                    ></path>
+                  </g></svg
+                >After Effects
+              </h3>
+              <div class="mt-[20px] font-[14px] font-normal text-white">
+                Industry Standart motion graphics & visual effects
+              </div>
+              <div>
+                <hr class="w-[290px] border-[#717790c7] mt-[20px]" />
+              </div>
+              <div class="flex justify-end mt-[16px]">
+                <button
+                  class="w-[96px] h-[30px] text-white bg-[#3a6df0] rounded-[20px]"
+                >
+                  Update
+                </button>
+                <div class="flex mt-1">
+                  <i
+                    class="px-3 btn-text-color fa fa-ellipsis-h text-[22px] rounded-[100px] small-three-dott"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
